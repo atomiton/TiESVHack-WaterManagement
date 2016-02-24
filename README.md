@@ -1,6 +1,9 @@
 ## User Interface
+##### Screen 1 - Shows Alert and Notification panel on right and left side respectively and markers for Residents,Wells,StandPipes,Mobile Vendors,Household Resellers.  
 ![alt Screen1](https://github.com/atomiton/TiESVHack-WaterManagement/blob/master/TieHackathon-UI/images/Water_Managment_Screen_1.png)
+##### Screen 2 - Shows Resident information 
 ![alt Screen2](https://github.com/atomiton/TiESVHack-WaterManagement/blob/master/TieHackathon-UI/images/Water_Managment_Screen_2.png)
+##### Screen 3 - Shows Graphical representation for Resident water access on daily basis
 ![alt Screen3](https://github.com/atomiton/TiESVHack-WaterManagement/blob/master/TieHackathon-UI/images/Water_Managment_Screen_3.png)
 
 ## Who are we?
