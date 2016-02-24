@@ -26,7 +26,7 @@ UI contains following things-
 ## Application setup steps
 * Clone complete application from Github
 
-* Start watermanagement aaplication jar
+* Start TQL Engine jar
 
 * Load data by running query from **queryToLoadData.txt**
 
