@@ -1,0 +1,53 @@
+<!-- Let the madness begin!! -->
+<DeleteAll>
+  <SubcriptionController>
+    <Id ne="" />
+  </SubcriptionController>
+</DeleteAll>
+<Create>
+  <SubcriptionController>
+    <Status>
+      Running
+    </Status>
+  </SubcriptionController>
+</Create>
+<DeleteAll>
+  <DateSubcriptionController>
+    <Id ne="" />
+  </DateSubcriptionController>
+</DeleteAll>
+<Create>
+  <DateSubcriptionController>
+    <Status>
+      Running
+    </Status>
+  </DateSubcriptionController>
+</Create>
+<DeleteAll>
+  <VirtualClock>
+    <Id ne="" />
+  </VirtualClock>
+</DeleteAll>
+<Create>
+  <VirtualClock>
+    <ClockId>
+      Clock-1
+    </ClockId>
+    <StartDate>
+      2012-12-01T08:05:02Z
+    </StartDate>
+    <CurrentDate>
+    </CurrentDate>
+    <StartHour>
+      0
+    </StartHour>
+    <CurrentHour>
+    </CurrentHour>
+    <OnOff>
+      On
+    </OnOff>
+    <Interval>
+      PT05S
+    </Interval>
+  </VirtualClock>
+</Create>

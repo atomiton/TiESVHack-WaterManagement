@@ -1,0 +1,108 @@
+<!-- Delete all Statuses -->
+<DeleteAll>
+  <WaterSourceStatus>
+    <Id ne=""/>
+  </WaterSourceStatus>
+</DeleteAll>
+<!-- Delete all Statuses -->
+<DeleteAll>
+  <WaterSource>
+    <Id ne=""/>
+  </WaterSource>
+</DeleteAll>
+<!-- Deleting Standpipes -->
+<DeleteAll>
+  <StandPipe>
+    <Id ne="" />
+  </StandPipe>
+</DeleteAll>
+<!-- Deleting Wells -->
+<DeleteAll>
+  <Well>
+    <Id ne="" />
+  </Well>
+</DeleteAll>
+<!-- Deleting HouseholdResellers -->
+<DeleteAll>
+  <HouseholdReseller>
+    <Id ne="" />
+  </HouseholdReseller>
+</DeleteAll>
+<!-- Deleting MobileVendors -->
+<DeleteAll>
+  <MobileVendor>
+    <Id ne="" />
+  </MobileVendor>
+</DeleteAll>
+<!-- Deleting Residents -->
+<DeleteAll>
+  <Residents>
+    <Id ne="" />
+  </Residents>
+</DeleteAll>
+<!-- Load Residents -->
+<loadFromCSV>
+  <LocationName>
+	C:/Projects/Atomiton/TieHackathon/TIEServersCode/watermanagement/spaces/
+  </LocationName>
+  <DestModelName>
+    Residents
+  </DestModelName>
+</loadFromCSV>
+<!-- Load StandPipe -->
+<loadFromCSV>
+  <LocationName>
+	C:/Projects/Atomiton/TieHackathon/TIEServersCode/watermanagement/spaces/
+  </LocationName>
+  <DestModelName>
+    Standpipe
+  </DestModelName>
+</loadFromCSV>
+<!-- Load Well -->
+<loadFromCSV>
+  <LocationName>
+    C:\\Projects\\Atomiton\\TieHackathon\\TIEServersCode\\watermanagement\\spaces\\
+  </LocationName>
+  <DestModelName>
+    Well
+  </DestModelName>
+</loadFromCSV>
+<!-- Load HouseholdReseller -->
+<loadFromCSV>
+  <LocationName>
+    C:\\Projects\\Atomiton\\TieHackathon\\TIEServersCode\\watermanagement\\spaces\\
+  </LocationName>
+  <DestModelName>
+    HouseholdReseller
+  </DestModelName>
+</loadFromCSV>
+<!-- Load MobileVendor -->
+<loadFromCSV>
+  <LocationName>
+    C:\\Projects\\Atomiton\\TieHackathon\\TIEServersCode\\watermanagement\\spaces\\
+  </LocationName>
+  <DestModelName>
+    MobileVendor
+  </DestModelName>
+</loadFromCSV>
+<!-- Create NGO -->
+<Query>
+  <DeleteAll>
+    <NGO>
+      <Id ne="" />
+    </NGO>
+  </DeleteAll>
+  <Create>
+    <NGO>
+      <StartingBudget>
+        5000
+      </StartingBudget>
+      <BudgetBalance>
+        5000
+      </BudgetBalance>
+      <CertificationProgram>
+        false
+      </CertificationProgram>
+    </NGO>
+  </Create>
+</Query>
