@@ -2,7 +2,7 @@ $(document).ready (function(){
             $("#error-alert").hide();
  });
 var scope;
-angular.module('appMaps', ['uiGmapgoogle-maps','ng-fusioncharts' ,'ui.bootstrap'])
+angular.module('appMaps', ['uiGmapgoogle-maps','ng-fusioncharts' ,'ui.bootstrap','highcharts-ng'])
     .controller('mainCtrl', function($scope, $log,$http,uiGmapIsReady,$timeout,queryService,$filter) {
         var x2js = new X2JS();
         //Store Google Map Options
@@ -842,12 +842,21 @@ angular.module('appMaps', ['uiGmapgoogle-maps','ng-fusioncharts' ,'ui.bootstrap'
                               var formattedNotifiedDate = $filter('date')(new Date($scope.notifiedDate),'dd, MMM')
                               $scope.noOfDaysPassed.push(formattedNotifiedDate);
                               
+                              // Used for Highcharts
+                              $scope.xAxisLabel = [];
+                              $scope.xAxisValue = [];
+
                               angular.forEach($scope.noOfDaysPassed, function(value,key){
                                 $scope.chartData.push({'label':value,'value':$scope.noOfResidentsGotWater[key]})
+                                $scope.xAxisLabel.push(value)
+                                $scope.xAxisValue.push($scope.noOfResidentsGotWater[key]);
                               });
                               
                               $scope.myDataSource.data = $scope.chartData;
 
+                              //Updating HighCharts data
+                              $scope.highchartsNG.series[0].data = $scope.xAxisValue
+                              $scope.highchartsNG.xAxis.categories = $scope.xAxisLabel
                             
                           } 
                           /***********************************************************************/
@@ -902,6 +911,49 @@ angular.module('appMaps', ['uiGmapgoogle-maps','ng-fusioncharts' ,'ui.bootstrap'
         //   chartData.push({'label':value,'value':$scope.noOfResidentsGotWater[key]})
         // });
         //console.log(chartData);
+        
+        /* Code Of High Charts starts */
+
+        $scope.xAxisLabel = [] 
+        $scope.xAxisValue = []
+        
+        $scope.highchartsNG = {
+          options: {
+              chart: {
+                  type: 'line'
+              }
+          },
+          series: [{
+              name: " ",
+              data: $scope.xAxisValue
+          }],
+          title: {
+            text: 'Water Access Details'
+          },
+          subtitle: {
+            text: 'Water Access Day by Day for Residents'
+          },
+          xAxis: {
+            categories: $scope.xAxisLabel,
+            title:{
+              text:"No. of Days"
+            }
+          },
+          yAxis: {
+            title: {
+              text: 'No. of Residents'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+          },
+          loading: false
+        }
+
+        /* Code for Highcharts Ends */
+
         $scope.myDataSource = {
           chart: {
             "caption": "Water Access Details",

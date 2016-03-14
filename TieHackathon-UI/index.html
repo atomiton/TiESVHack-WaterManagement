@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:ng="http://angularjs.org/" ng-app="appMaps">
+<html xmlns:ng="https://angularjs.org/" ng-app="appMaps">
 
 <head>
     <meta charset="utf-8" />
@@ -7,12 +7,14 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="http://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
+    <script type="text/javascript" src="https://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.4/angular.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.1/ui-bootstrap-tpls.min.js"></script>
     <script type="text/javascript" src="ext_js/fusionChart/angular-fusioncharts.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/4.2.3/highcharts.js"></script>
+    <script type="text/javascript" src="ext_js/highCharts/highcharts-ng.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
-    <script src="http://rawgit.com/angular-ui/angular-google-maps/2.0.X/dist/angular-google-maps.js"></script>
+    <script src="https://rawgit.com/angular-ui/angular-google-maps/2.0.X/dist/angular-google-maps.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.min.js"></script>
     <script type='text/javascript' src='app.js'></script><!--script-->
     <script type="text/javascript" src="queryService.js"></script>
@@ -362,12 +364,19 @@
             <button  uib-popover-template="'residentWaterAccessChartPopoverTemplate.html'" popover-placement ="top"  type="button" class="btn btn-success" style="margin-left:20px">Resident Water Access Statistics</button> 
         </div>
         <script type="text/ng-template" id="residentWaterAccessChartPopoverTemplate.html">
+            <!--
             <div fusioncharts
                 width="600"
                 height="400"
                 type="line"
                 dataSource="{{myDataSource}}" >
             </div>
+            -->
+
+            <div>
+                <highchart id="chart1" config="highchartsNG"></highchart>
+            </div>
+
         </script>
 
     <!-- <section id="Footer" >
